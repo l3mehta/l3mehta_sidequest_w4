@@ -1,31 +1,19 @@
 ## Project Title
 
-GBDA302 Week 4 Example 5: Blob Platformer (JSON + Classes)
+GBDA302 Week 4 Example 5: Adding Levels to Blob Formater
 
 ---
 
 ## Authors
 
-Karen Cochrane and David Han
+Liza Mehta
 
 ---
 
 ## Description
 
 This matches the structure of the original blob sketch from Week 2 but moves
-details into classes.
-
----
-
-## Learning Goals
-
-Learning Goals:
-
-- - load JSON in preload()
-- create WorldLevel from JSON
-- create BlobPlayer
-- update + draw each frame
-- handle input events (jump, optional next level)
+details into classes. It adds in a second level to the game and keeps track of which level the player is on.
 
 ---
 
@@ -35,8 +23,21 @@ N/A
 
 ---
 
+## Iteration Notes
+
+Post Play Test:
+
+    Add a second level to the game
+    Randomize where the platoforms will show up
+
+Post Showcase:
+
+    Make the levels more difficult as the game continues
+
+---
+
 ## GenAI
 
-The code was written by Dr. Karen Cochrane and David Han but they used GenAI to write the comments.
+The code was written with the help of ChatGPT 5.2
 
 ---

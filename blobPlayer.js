@@ -150,6 +150,7 @@ class BlobPlayer {
 
     // 10) Optional: keep player within canvas horizontally.
     this.x = constrain(this.x, this.r, width - this.r);
+    this.y = constrain(this.y, this.r, height - this.r);
 
     // 11) Advance blob animation time
     this.t += this.tSpeed;

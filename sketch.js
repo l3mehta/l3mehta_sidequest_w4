@@ -27,13 +27,11 @@ function preload() {
 }
 
 function setup() {
-  // Create the player once (it will be respawned per level).
-  player = new BlobPlayer();
+  createCanvas(640, 360);
 
-  // Load the first level.
+  player = new BlobPlayer();
   loadLevel(0);
 
-  // Simple shared style setup.
   noStroke();
   textFont("sans-serif");
   textSize(14);
@@ -49,7 +47,11 @@ function draw() {
 
   // 3) HUD
   fill(0);
-  text(world.name, 10, 18);
+  text(
+    `Level ${levelIndex + 1} / ${data.levels.length} — ${world.name}`,
+    10,
+    18,
+  );
   text("Move: A/D or ←/→ • Jump: Space/W/↑ • Next: N", 10, 36);
 }
 
@@ -77,11 +79,6 @@ function loadLevel(i) {
 
   // Create the world object from the JSON level object.
   world = new WorldLevel(data.levels[levelIndex]);
-
-  // Fit canvas to world geometry (or defaults if needed).
-  const W = world.inferWidth(640);
-  const H = world.inferHeight(360);
-  resizeCanvas(W, H);
 
   // Apply level settings + respawn.
   player.spawnFromLevel(world);
